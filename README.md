@@ -1,1 +1,1 @@
-Okey yada 101 oyunları için zar programı. Srand fonksiyonunu döndürerek iki zar atar 
+Okey yada 101 oyunları için zar programı. Srand fonksiyonunu döndürerek iki zar atar. Program C dilinde yazılmıştır.
