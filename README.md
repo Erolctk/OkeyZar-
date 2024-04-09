@@ -1,1 +1,172 @@
-# OkeyZari
+/*okey ya da 101 oyunu için zar programı*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main()
+{
+    int oyun;
+    
+    srand(time(NULL));
+    //oyun döngü içinde devam eder
+    while(1){
+        //sürekli yeni zar döndürür 
+        int zar1= 1 + rand()%6;
+        int zar2= 1+ rand()%6;
+    
+        switch(zar1){ //ilk zar atıldığında bunlardan birini yazdırır 
+            case 1:
+                printf("      _________\n"
+                       "     /         /|\n"
+                       "    /_________/ |\n"
+                       "   |          | |\n"
+                       "   |          | |\n"
+                       "   |    •     | |\n"
+                       "   |          | /\n"
+                       "   |__________|/\n\n");
+                break;
+            
+            case 2:
+               printf("      _________\n"
+                      "     /         /|\n"
+                      "    /_________/ |\n"
+                      "   |          | |\n"
+                      "   |          | |\n"
+                      "   |  •    •  | |\n"
+                      "   |          | /\n"
+                      "   |__________|/\n\n");
+               break;    
+            
+            case 3:
+               printf("      _________\n"
+                      "     /         /|\n"
+                      "    /_________/ |\n"
+                      "   |          | |\n"
+                      "   | •        | |\n"
+                      "   |    •     | |\n"
+                      "   |       •  | /\n"
+                      "   |__________|/\n\n");
+               break;   
+               
+            case 4:
+               printf("      _________\n"
+                      "     /         /|\n"
+                      "    /_________/ |\n"
+                      "   |          | |\n"
+                      "   |  •    •  | |\n"
+                      "   |          | |\n"
+                      "   |  •    •  | /\n"
+                      "   |__________|/\n\n");
+               break;                                      
+               
+            case 5:
+               printf("      _________\n"
+                      "     /         /|\n"
+                      "    /_________/ |\n"
+                      "   |          | |\n"
+                      "   |  •    •  | |\n"
+                      "   |  •       | |\n"
+                      "   |  •    •  | /\n"
+                      "   |__________|/\n\n");
+               break;   
+               
+            case 6:
+               printf("      _________\n"
+                      "     /         /|\n"
+                      "    /_________/ |\n"
+                      "   |          | |\n"
+                      "   |  •    •  | |\n"
+                      "   |  •    •  | |\n"
+                      "   |  •    •  | /\n"
+                      "   |__________|/\n\n");
+               break;                  
+        }
+        
+        switch(zar2){ //ikinci zar atıldığında bunlardan birini yazdırır 
+            case 1:
+                printf("      _________\n"
+                       "     /         /|\n"
+                       "    /_________/ |\n"
+                       "   |          | |\n"
+                       "   |          | |\n"
+                       "   |    •     | |\n"
+                       "   |          | /\n"
+                       "   |__________|/\n\n");
+                break;
+            
+            case 2:
+               printf("      _________\n"
+                      "     /         /|\n"
+                      "    /_________/ |\n"
+                      "   |          | |\n"
+                      "   |          | |\n"
+                      "   |  •    •  | |\n"
+                      "   |          | /\n"
+                      "   |__________|/\n\n");
+               break;    
+            
+            case 3:
+               printf("      _________\n"
+                      "     /         /|\n"
+                      "    /_________/ |\n"
+                      "   |          | |\n"
+                      "   | •        | |\n"
+                      "   |    •     | |\n"
+                      "   |       •  | /\n"
+                      "   |__________|/\n\n");
+               break;   
+               
+            case 4:
+               printf("      _________\n"
+                      "     /         /|\n"
+                      "    /_________/ |\n"
+                      "   |          | |\n"
+                      "   |  •    •  | |\n"
+                      "   |          | |\n"
+                      "   |  •    •  | /\n"
+                      "   |__________|/\n\n");
+               break;                                      
+               
+            case 5:
+               printf("      _________\n"
+                      "     /         /|\n"
+                      "    /_________/ |\n"
+                      "   |          | |\n"
+                      "   |  •    •  | |\n"
+                      "   |  •       | |\n"
+                      "   |  •    •  | /\n"
+                      "   |__________|/\n\n");
+               break;   
+               
+            case 6:
+               printf("      _________\n"
+                      "     /         /|\n"
+                      "    /_________/ |\n"
+                      "   |          | |\n"
+                      "   |  •    •  | |\n"
+                      "   |  •    •  | |\n"
+                      "   |  •    •  | /\n"
+                      "   |__________|/\n\n");
+               break;                  
+        }
+        printf("%d'incinin %d'sı seçilmelidir.\n\n", zar1,zar2);
+        
+        
+        printf("Döngüden çıkmak için 7 giriniz\n"
+               "Devam etmek için 8 giriniz.\n");
+               
+        scanf("%d", &oyun);
+        
+        if(oyun == 8)  //oyuncu 8 girerse program tekrar zar atar ve devam eder
+            continue;
+        if(oyun == 7)  //oyuncu 7 girerse döngü sonlanır ve oyun sona erer
+            printf("Oyundan çıktınız.");
+            break;
+        
+    
+    }
+    
+    return 0;
+
+}
